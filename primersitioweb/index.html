@@ -5,55 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>primer pagina</title>
-    <style>
-        h1 {
-            background-color: rgb(114, 237, 0);
-            color: rgb(0, 0, 0);
-        }
-        h2{
-            background-color: rgb(114, 237, 0);
-            color: rgb(0, 0, 0);
-        }
-        a{
-            background-color: rgb(242, 255, 0);
-            color: rgb(0, 0, 0);
-        }
-    </style>
+<style>
+    *{
+        box-sizing: border-box;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+    }
+    #general{
+        background-color: blue;
+        color:black;
+        width: auto;
+    }
+    #Menu{
+        background-color: aqua;
+        color: black;
+        width: 100%;
+        height: 180px;
+        float: left;
+    }
+    #hypervinculos{
+        background-color: chartreuse;
+        color: black;
+        width: 100%;
+        height: 100%;
+    }
+    #footer{
+        background-color: blue;
+        width: 100%;
+        height: 100%;
+        float: left;
+
+    }
+</style>
 
 
 </head>
 <body>
-    <div id="primercontenedor">
+    <div id="general">
         <h1>Mi primera pagina web sobre mi auto favorito</h1 id="Titulo de la pagina">
     </div>
 
-    <div id="segundocontenedor">
+    <div id="Menu">
         <h2>Menu de mi auto favorito llamado Supra</h2 id="Texto de menu">
         <h3>En los siguientes enlaces encontratras imagenes, informacion y un video para que te ayude a conocer un poco de mi auto favorito</h3>
     </div id="Texto informativo de lo que viene en la pagina">
-    
-    <div id="tercercontenedor">
-        <ul>
-            <li>
-                <a href="imagenes.html">Imagenes del auto</a>
-            </li>        
-        </ul>
-    </div>
 
-    <div id="cuartocontenedor">
-        <ul>
-            <li>
-                <a href="informacion.html">Informacion del auto</a>
-            </li>
-        </ul>
-    </div>
+        <div id="hypervinculos">
+            
+            <ul>
+                <li>
+                    <a href="imagenes.html">Imagenes del auto</a>
+                </li>
+                <li>
+                    <a href="informacion.html">Informacion del auto</a>
+                </li>
+                <li>
+                    <a href="videodelsupra.html">Video de informacion he historia del supra</a>
+                </li>
+                
+            </ul>
+        </div>
 
-    <div id="quintocontenedor">
-        <ul>
-            <li>
-                <a href="videodelsupra.html">Video de informacion he historia del supra</a>
-            </li>
-        </ul>
+        <div id="footer">
+            <p>
+                <h1>fin</h1>
+            </p>
+        </div>
     </div>
 </body>
 </html>

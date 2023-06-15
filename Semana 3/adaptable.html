@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseno adaptable</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /* Para las classe se define con . */
+        .general{
+            position:absolute;
+            width: auto;
+        }
+        .header{     
+            width: 100%;
+            height: 60px;
+            float:left
+        }
+        .main{
+            
+            width: 100%;
+            height: 620px;
+            float:left
+        }
+        .menu{
+            width: 30%;
+            height: 620px;
+            float:left
+        }
+        .dashboard{
+            
+            width: 70%;
+            height: 620px;
+            float:left
+        } 
+        .footer{
+            width: 100%;
+            height: 60px;
+            float:left
+        }
+        .fondogris{
+            background-color: gray;
+        }
+
+        .fondoazul{
+            background-color: blue;
+        }
+
+        .letraroja{
+            color: red;
+        }
+
+        .letrablanca{
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="general">
+        <div class="header fondogris">
+            <h1>Responsive adaptable</h1>
+        </div>
+        <div class="main">
+            <div class="menu fondogris letraroja">
+                <ul>
+                    <li>111111</li>
+                    <li>22222</li>
+                    <li>3333</li>
+                    <li>4444</li>
+                </ul>
+            </div>
+            <div class="dashboard fondoazul letrablanca">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus quos accusantium, ea animi possimus autem aperiam. Maiores voluptates ab reiciendis, dolor eius maxime unde molestiae velit ut, accusantium tempora dolorum.
+                </p>
+            </div>
+        </div>
+        <div class="footer fondogris">
+            <h2>Pie de pagina</h2>
+        </div>
+    </div>
+</body>
+</html>

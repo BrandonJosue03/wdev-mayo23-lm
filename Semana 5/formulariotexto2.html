@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Formulario Texto</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="container">
+        <form action="">
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre</label>
+              <input type="text"
+                class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese su nombre">
+              <small id="helpId" class="form-text text-muted">Ingrese el nombre</small>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Apellido</label>
+              <input type="text"
+                class="form-control" name="apellido" id="apellido" aria-describedby="helpId" placeholder="Ingrese su apellido">
+              <small id="helpId" class="form-text text-muted">apellido</small>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Date</label>
+              <input type="date"
+                class="form-control" name="fecha" id="fecha" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Numero</label>
+              <input type="number"
+                class="form-control" name="numero" id="numero" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+            <a name="" id="" class="btn btn-success" href="#" role="button" onclick="mostrarmensaje()">Imprimir Mensaje</a>
+            <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="abrirpagina()">Button</a>
+            <a name="" id="" class="btn btn-danger" href="#" role="button" onclick="fecha()">Fecha</a>
+            <a name="" id="" class="btn btn-info" href="#" role="button" onclick="mostrarnumero()">Mostrar numero</a>
+        </form>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script>
+    function mostrarmensaje(){
+        var comolequieraponer = document.getElementById("nombre").value;
+        var apellido = document.getElementById("apellido").value;
+        var mensajepersonalizado = "Bienvenido " + comolequieraponer + " " + apellido;
+        alert(mensajepersonalizado);
+    }
+
+    function abrirpagina(){
+        alert("Abriendo pagina");
+    }
+
+    function fecha(){
+        fecha = document.getElementById("fecha").value;
+        alert(fecha);
+    }
+
+    function mostrarnumero(){
+        numero = Number(document.getElementById("numero").value);
+        numero = numero + 12;
+        alert(numero);
+    }
+
+  </script>
+
+
+
+
+</body>
+
+</html>

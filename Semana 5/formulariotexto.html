@@ -48,6 +48,11 @@
             <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="abrirpagina()">Button</a>
             <a name="" id="" class="btn btn-danger" href="#" role="button" onclick="fecha()">Fecha</a>
             <a name="" id="" class="btn btn-info" href="#" role="button" onclick="mostrarnumero()">Mostrar numero</a>
+            <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="mostrarmensajehtml()">Escribiendo en el html</a>
+            <a name="" id="" class="btn btn-info" href="#" role="button" onclick="mostrarnumero()">Mostrar numero</a>
+            <div>
+              <span id="soyresultado">---</span>
+            </div>
         </form>
     </div>
   </main>
@@ -85,6 +90,7 @@
         numero = numero + 12;
         alert(numero);
     }
+
     function mostrarmensajehtml(){
       numero = Number(document.getElementById("numero").value);
       document.getElementById("soyresultado").innerHTML = numero;

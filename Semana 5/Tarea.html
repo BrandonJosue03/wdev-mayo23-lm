@@ -38,6 +38,8 @@
         <button id="restar" class="btn btn-secondary">Restar</button>
         <button id="multiplicar" class="btn btn-success">Multiplicar</button>
         <button id="dividir" class="btn btn-warning">Dividir</button>
+        <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="mostrarmensajehtml()">Escribiendo en el html</a>
+
         <!-- <button type="button" class="btn btn-info">Info</button> -->
 
     </form>
@@ -96,6 +98,10 @@
             alert (numero1 + " * " + numero2 + " = " + (numero1*numero2));
         }
         
+        function mostrarmensajehtml(){
+      numero = Number(document.getElementById("numero").value);
+      document.getElementById("soyresultado").innerHTML = numero;
+    }
                 
     </script>
 

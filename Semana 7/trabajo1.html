@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ejercicios 1</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <div class="container"> 
+    <main>
+        
+    </main>
+  </div>
+  
+
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+    <script>
+        // Tengo dos dineros, 30,000 y 70,000.
+        // El de 30,000 cada mes incrementa 10%.
+        // El de 70,000 cada mes incrementa 5%.
+        //
+        // Necesita saber cuanto valor tienen estos dos dineros
+        // después de X meses.
+        //
+        // Solución:
+        // Empezamos con el dinero original.
+        // Para cada mes, guardaremos el valor actual y
+        // le sumaremos 5% o 10% respectivamente.
+
+
+        function ganancia(plazo) {
+            let inversionHipoteca = 70_000;
+            let inversionDeposito = 30_000;
+            let tasa5 = 0.05;
+            let tasa10 = 0.10;
+
+            
+            let totalHipoteca = (inversionHipoteca * tasa5) + inversionHipoteca;
+            let totalDeposito = (inversionDeposito * tasa10) + inversionDeposito;
+
+
+            for (let i = 0; i < plazo; i++) {
+                totalHipoteca = totalHipoteca + (totalHipoteca*tasa5);
+                totalDeposito = totalDeposito + (totalDeposito*tasa10);           
+            }
+
+            console.log("Hipoteca " + plazo, totalHipoteca);
+            console.log("Deposito " + plazo, totalDeposito);        
+        }
+        ganancia(1);
+        ganancia(2);
+        ganancia(3);
+        
+
+
+        // Una persona tiene $100.000 y decide invertir $70.000
+        // en bonos hipotecarios a un 5% (mensual)
+        // y el resto en un depósito a plazo a 10% (mensual).
+        // ¿Cuánto dinero ganará esta persona después de un mes? 6500
+        // 
+        // #1 mes 70000 + 5%
+        // #2 mes (70000 + 5%) + 5%
+        // #3 mes ((70000 + 5%) + 5%) + 5%
+
+
+    </script>
+</body>
+
+</html>

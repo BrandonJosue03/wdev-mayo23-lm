@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ejercicio 2</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+    
+  <script>
+    
+    let totalCompra = 12_000;
+    let descuento = 1_000;
+    let impuesto = 0.13;
+
+    let resulPrimeroDesc = ((totalCompra - descuento) * impuesto + totalCompra - descuento);
+    let resulPrimeroIva = ((totalCompra * impuesto) - descuento + totalCompra);
+
+    console.log("resultado primero descuento luego iva " + resulPrimeroDesc);
+    console.log("resultado primero iva luego descuento " + resulPrimeroIva);
+    console.log("primero el descuento es mas barato " + (resulPrimeroDesc<resulPrimeroIva));
+
+
+
+    //ejercicio2 = """
+// Usted va a hacer compras por 12000 colones en un comercio
+// y el vendedor le ofrece un descuento de 1000 colones,
+//  demuestre como sería más barato el precio final,
+  //  si primero le aplican el descuento y
+  //  luego le cobran el 13% de impuesto o que primero
+  //  le carguen el 13% de impuesto y
+//      luego le hagan el descuento.
+// """
+
+// #12000-1000
+// #12000-1000 * +.13 ( hagan una peque formula cual les de 0.13) numero de impuesto/100
+// #12000 * +.13 - 1000
+
+// print(ejercicio1.upper())
+
+  </script>
+</body>
+
+</html>

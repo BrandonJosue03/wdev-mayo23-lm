@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Ejercicio 3</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+    <div class="container">
+        <main>
+          <h1>
+            Ingrese dos numeros para ver el resultado mayor
+          </h1>
+          <div>
+            <div class="mb-3">
+              <label for="" class="form-label">Numero 1</label>
+              <input type="Number"
+                class="form-control" name="primer-valor" id="primer-valor" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Numero</small>
+            </div>
+              
+              <div class="container">
+              <label for="" class="form-label">Numero 2</label>
+              <input type="Number"
+                class="form-control" name="segundo-valor" id="segundo-valor" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Numero</small>
+              </div>
+
+             <div>
+              <a name="comparar" id="comparar" class="btn btn-primary" href="#" role="button">Comparar</a>
+             </div>
+            </div>  
+        </main>
+    </div>
+
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+    <script>
+
+      let primerValorInput = document.getElementById("primer-valor");
+      let segundoValorInput = document.getElementById("segundo-valor");
+      let buttonComparar = document.getElementById("comparar");
+      buttonComparar.addEventListener("click", comparardosnumeros);
+              
+      function comparardosnumeros() {
+
+        let primerValor = Number(primerValorInput.value);       
+        let segundoValor = Number(segundoValorInput.value);
+        
+        if (primerValor > segundoValor) {
+          alert("Es mayor" + primerValor);
+        } else if (segundoValor > primerValor) {
+          alert("Es mayor" + segundoValor);
+        } else if (primerValor == segundoValor) {
+          alert("Son iguales");
+        }
+                    
+      }
+
+      //         ejercicio3 = """
+      // Escriba un algoritmo que lea dos valores,
+      //  determine el mayor valor e imprima el mayor
+      //    valor con un mensaje de identificación.
+      // """
+      // #ocupo inputs
+      // #y los comparo con el operador
+    </script>
+
+</body>
+
+</html>

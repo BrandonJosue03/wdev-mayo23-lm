@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+    <body>
+        <header>
+          <!-- place navbar here -->
+        </header>
+        <main>
+          <div>
+            <h1>
+              Seleccione su sexo 
+            </h1>
+          </div>
+          <label for="sexo">Sexo:</label>
+          <select id="sexo" name="sexo">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+          </select>
+
+         <div>
+          <h1>
+            Introdusca su edad
+          </h1>
+         </div>
+
+         <div>
+          <label for="edad">Edad</label>
+          <input type="number" name="" id="edad">
+         </div>
+         
+         <div>
+            <a name="calcular" id="calcular" class="btn btn-primary" href="#" role="button">Calcular</a>
+         </div>
+    
+        </main>
+        <footer>
+          <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+          integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+          integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+        
+        <script>
+
+         let calcular = document.getElementById("calcular");
+         calcular.addEventListener("click", pensionarse);
+
+         
+        function pensionarse() {
+          // string
+          let genero = document.getElementById("sexo").value;
+          // Number
+          let edad = Number(document.getElementById("edad").value);
+          let pensionM = 65;
+          let pensionF = 62;
+          
+          if (genero == "femenino" && edad >= 62) {
+            alert("Es pensionable");
+
+          } else if (genero == "masculino" && edad >= 65) {
+            alert("Es pensionable");
+          } else {
+            alert("No es pensionable");
+          }
+
+        }
+        </script>
+      
+
+</body>
+</html>
+
+<!-- Escriba un algoritmo que permita leer el sexo
+y la edad de una persona dada e imprima si la
+persona está en edad de pensionarse o no,
+ tomando en cuenta los siguientes datos:
+Hombres: edad de pensión mayor de 65 años.
+Mujeres: edad de pensión mayor a 62 años.
+ -->

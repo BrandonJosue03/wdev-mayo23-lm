@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Calculadora de factura</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <h1>Calculadora de Factura</h1>
+
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio"><br><br>
+    
+    <label for="impuesto">Impuesto (%):</label>
+    <input type="number" id="impuesto"><br><br>
+    
+    <label for="descuento">Descuento:</label>
+    <input type="number" id="descuento"><br><br>
+    
+    <button onclick="calcularTotal()">Calcular</button>
+    
+    <p id="resultado"></p>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script>
+    function calcularTotal() {
+//obtener los valores de los inputs
+        var precio = parseFloat(document.getElementById('precio').value);
+        var impuesto = parseFloat(document.getElementById('impuesto').value);
+        var descuento = parseFloat(document.getElementById('descuento').value);
+
+//Calcular el valor total
+      var total = precio + (precio * impuesto / 100) - descuento;
+
+      // Mostrar el resultado en el elemento con id "resultado"
+        document.getElementById('resultado').innerHTML = "Valor total de la factura: " + total;
+    }
+</script>
+</body>
+
+
+</html>
+ejercio4 = """
+Escriba un algoritmo que lea los siguientes valores:
+precio, impuesto y descuento,
+y calcule el valor total de la factura.
+"""
+#cuantos inputs? 3
+#resultado 15400 ??? no tiene el iva, y no tiene el descuento.
+#resultado - descuennto, al final se le aplica el iva

@@ -1,0 +1,81 @@
+<script>
+
+//modulos de codigo, librerias
+//class palabra reservada
+    class inventario{
+        constructor(id, nombre, precio, color, diccionario){
+            this.id = id;
+            this.nombre = nombre;
+            this.precio = precio;
+            this.color = color;
+            this.lista = [];
+            this.diccionario = diccionario;
+        }
+
+        ajustarId(id){
+            this.id = id;
+        }
+
+        funcionquedevuelveid(){
+            return this.id ;
+        }
+
+        devolvernombre(){
+            return this.nombre ;
+        }
+
+        editarnombre(nombre){
+            this.nombre = nombre;
+        }
+
+        devolverprecio(){
+            var precio2 = this.precio * 13;
+            return precio2;
+        }
+
+        contadora(contador){
+            for (let index = 0; index < contador; index++) {
+                console.log(index);
+                this.lista.push(index);
+            }
+        }
+
+        muestralista(){
+            return this.lista;
+        }
+        muestradiccionario(){
+            return this.diccionario;
+        }
+    }
+
+
+    const cualquier = new inventario(1,"Laptop",1200, "Gris","");
+
+
+    var nombre = "CPU";
+
+    var diccionarioJson = {
+        id: 1, 
+        nombre: nombre, 
+        precio: 12002, 
+        color:"Rojo"
+    }
+
+    console.log(diccionarioJson.color);
+
+    const cualquier2 = new inventario(diccionarioJson.id, diccionarioJson.nombre, diccionarioJson.precio, diccionarioJson.color,diccionarioJson);
+    console.log(cualquier2.muestradiccionario());
+    console.log(cualquier2.devolvernombre());
+    console.log( cualquier.funcionquedevuelveid());
+
+    cualquier.ajustarId(1020202);
+
+    console.log( cualquier.funcionquedevuelveid());
+    console.log(cualquier.devolvernombre());
+    cualquier.editarnombre("CPU");
+    console.log(cualquier.devolvernombre());
+    console.log(cualquier.devolverprecio());
+    cualquier.contadora(10);
+    console.log(cualquier.muestralista());
+
+</script>

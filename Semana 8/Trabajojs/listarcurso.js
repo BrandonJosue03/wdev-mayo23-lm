@@ -34,7 +34,9 @@ function ajustardatostabla(datos){
                                 <td>${objetoindividual.descripcion}</td>
                                 <td>${objetoindividual.tiempo}</td>
                                 <td>${objetoindividual.usuario}</td>
-                                <td>---</td>                              
+                                <td>
+                                <a name="Eliminar" id="Eliminar" class="btn btn-primary" href="#" role="button" onclick="mostrarModal()">Eliminar</a>
+                                </td>                              
             </tr>
        `;
     }
@@ -44,5 +46,8 @@ function ajustardatostabla(datos){
            
 }
 
+function mostrarModal(){
+    alert("Eliminar");
+}
 
 consultardatos();

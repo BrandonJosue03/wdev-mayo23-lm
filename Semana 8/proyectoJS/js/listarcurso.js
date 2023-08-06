@@ -47,6 +47,7 @@ function ajustardatostabla(datos){
 }
 
 function mostrarModal(){
+    myModalEliminar.show();
     alert("Eliminar");
 }
 

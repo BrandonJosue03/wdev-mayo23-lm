@@ -1,5 +1,8 @@
 var apibase = "https://paginas-web-cr.com/ApiPHP/apis/";
 var apiconsultar = "ListaCurso.php";
+const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'))
+
+
 
 let tablaresultado = document.querySelector('#tablaresultado');
 
@@ -47,6 +50,7 @@ function ajustardatostabla(datos){
 }
 
 function mostrarModal(){
+    myModalEliminar.show();
     alert("Eliminar");
 }
 

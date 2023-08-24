@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .main {
+            float: left;
+            width: 70%;
+            padding: 1em;
+        }
+
+        .sidebar {
+            float: right;
+            width: 30%;
+            padding: 1em;
+            background-color: #f4f4f4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+
+            .main, .sidebar {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Página Web</h1>
+    </header>
+
+    <div class="container">
+        <main class="main">
+            <h2>Contenido Principal</h2>
+            <p>Este es el contenido principal de mi página web.</p>
+        </main>
+
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Este es el contenido de la barra lateral.</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>Derechos Reservados &copy; 2023</p>
+    </footer>
+</body>
+</html>

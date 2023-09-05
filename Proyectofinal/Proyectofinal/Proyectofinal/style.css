@@ -1,0 +1,59 @@
+
+
+
+
+#menuprincipal {    font-family: Arial, Helvetica, sans-serif;
+    color: blanchedalmond;
+    
+
+}
+#piepagina {
+    color: rgb(252, 252, 254);
+}
+
+
+header{
+    background-color: rgb(7, 14, 45);
+    padding-bottom: 30px; 
+    margin-bottom: 20px;   
+}
+
+footer{
+    background-color: rgb(7, 14, 45);
+    margin-bottom:0px ;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+    
+}
+
+p {
+    color: black; 
+}
+
+h5 {
+    color: black;
+}
+
+main {
+    padding-top: 40px;
+    padding-bottom: 40px;   
+}
+
+body {
+    background-color: rgb(251, 253, 251);
+
+}
+
+#card {
+    display: flex;
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* si es una clase inicia con pone
+si es un elemento normal solo el nombre 
+Si es un id se us un #*/

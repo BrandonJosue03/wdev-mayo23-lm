@@ -63,6 +63,16 @@
         realizarOperacion("dividir");
       });
 
+      $("#Ocultar").click(function (e) { 
+        e.preventDefault();
+        $("#contenedor1").hide();
+      });
+
+      $("#Mostrar").click(function (e) { 
+        e.preventDefault();
+        $("#contenedor1").show();
+      });
+
     });
   </script>
 
@@ -74,7 +84,7 @@
   </header>
   <main>
     <div class="container">
-      <div class="mb-3">
+      <div class="mb-3" id="contenedor1">
         <label for="dato1" class="form-label">Dato1</label>
         <input type="number" class="form-control" name="dato1" id="dato1" aria-describedby="helpId" placeholder="">
       </div>
@@ -88,6 +98,13 @@
       <a name="restar" id="restar" class="btn btn-primary" href="#" role="button">Restar</a>
       <a name="multiplicar" id="multiplicar" class="btn btn-primary" href="#" role="button">Multiplicar</a>
       <a name="dividir" id="dividir" class="btn btn-primary" href="#" role="button">Dividir</a>
+
+      <a name="Ocultar" id="Ocultar" class="btn btn-primary" href="#" role="button">Ocultar</a>
+      <a name="Mostrar" id="Mostrar" class="btn btn-primary" href="#" role="button">Mostrar</a>
+
+
+
+
     </div>
     <div class="container mt-3">
       <p id="resultado"></p>

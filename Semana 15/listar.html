@@ -13,33 +13,31 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-
     <script>
 
         var url = "https://paginas-web-cr.com/ApiPHP/apis/ListaCurso.php";
+
+        $(document).ready(function () {
+            cargardatos();
+        });
         
-            $(document).ready(function () {
-                cargardatos();
+        function cargardatos(){
+            $.ajax({
+                type: "POST",
+                url: url,                
+                dataType: "json",
+                success: function (response) {
+                    ajustardatostabla(response.data);
+                   // console.log(response);
+                },
+                error: function ( xhr, textStatus, errorThrown){
+                    console.log("Error ", errorThrown);
+                }
+                
             });
+        }
 
-            function cargardatos(){
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    dataType: "json",
-                    success: function (response) {
-                        ajustardatostabla(response.data);
-                        //console.log(response);
-                        
-                    },
-                    error: function(xhr,textStatus,errorThrown){
-                    console.log("Error",errorThrown);
-                    }
-
-                });
-            }
-
-//             function consultardatos(){
+//         function consultardatos(){
 //     //fetch sirve para extraer, insertar modificar, eliminar consultardatos, 
 //     apiurl = apibase + apiconsultar ;
 //     fetch(apiurl)
@@ -53,29 +51,49 @@
 //     .catch(console.log);
 // }
 
-    function ajustardatostabla(datos){
+function ajustardatostabla(datos){
     console.log("datos"+datos);
     for (const objetoindividual of datos) {
-//        tablaresultado.innerHTML += `
-//             <tr class="table-primary">
-//                                 <td scope="row">${objetoindividual.id}</td>
-//                                 <td>${objetoindividual.nombre}</td>
-//                                 <td>${objetoindividual.descripcion}</td>
-//                                 <td>${objetoindividual.tiempo}</td>
-//                                 <td>${objetoindividual.usuario}</td>
-//                                 <td>
-//                                     <a name="Editar" id="Editar" class="btn btn-primary" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
-//                                     <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
-//                                 </td>                              
-//             </tr>
-//        `;
+    //    tablaresultado.innerHTML += `
+    //         <tr class="table-primary">
+    //                             <td scope="row">${objetoindividual.id}</td>
+    //                             <td>${objetoindividual.nombre}</td>
+    //                             <td>${objetoindividual.descripcion}</td>
+    //                             <td>${objetoindividual.tiempo}</td>
+    //                             <td>${objetoindividual.usuario}</td>
+    //                             <td>
+    //                                 <a name="Editar" id="Editar" class="btn btn-success" role="button" onclick="mostrarEditarModal('${objetoindividual.id}','${objetoindividual.nombre}','${objetoindividual.descripcion}','${objetoindividual.tiempo}')">Editar</a>
+    //                                 ||
+    //                                 <a name="Eliminar" id="Eliminar" class="btn btn-danger" role="button" onclick="mostrarModal('${objetoindividual.id}')">Eliminar</a>
+    //                             </td>                              
+    //         </tr>
+    //    `;
     }   
-   }
+}
 
+function crearCurso(){
+
+//1.obtener los valores del input por medio de funciones de jquery, ya no se usa el documentgetelementid
+//2.Crear un objeto donde se puedan agregar estos valores
+//3.
+
+// objeto = {
+//     nombre,
+//     descripcion
+// }
+    $.ajax({
+        type: "method",
+        url: "url",
+        data: objeto,
+        dataType: "dataType",
+        success: function (response) {
+            
+        }
+    });    
+}
 
 
     </script>
-
 
 </head>
 
@@ -84,32 +102,7 @@
     <!-- place navbar here -->
   </header>
   <main>
-    <div class="table-responsive">
-        <table class="table table-striped
-        table-hover	
-        table-borderless
-        table-black
-        align-middle">
-            <thead class="table-light">
-                <caption>Lista de datos</caption>
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Descripcion</th>
-                    <th>tiempo</th>
-                    <th>Usuario</th>
-                    <th>Acciones</th>
-                </tr>
-                </thead>
-                <tbody class="table-group-divider" id="tablaresultado">
-                    
-                 
-                </tbody>
-                <tfoot>
-                    
-                </tfoot>
-        </table>
-    </div>
+
   </main>
   <footer>
     <!-- place footer here -->

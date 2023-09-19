@@ -16,11 +16,17 @@
     <script>
 
 
-
+     //  
+           //  const modalSuccess = new bootstrap.Modal(document.getElementById('modalSuccess'));
         var url = "https://paginas-web-cr.com/ApiPHP/apis/ListaCurso.php";
 
         $(document).ready(function () {
-          let tablaresultado = document.querySelector('#tablaresultado');
+            let tablaresultado = document.querySelector('#tablaresultado');
+
+//            const myModalEliminar = new bootstrap.Modal(document.getElementById('myModalEliminar'));
+            const myModalEditar = new bootstrap.Modal(document.getElementById('myModalEditar'));
+
+
             cargardatos();
         });
         
@@ -75,6 +81,14 @@ function ajustardatostabla(datos){
        `;
     }   
 }
+
+function mostrarEditarModal(id, nombre, descripcion, tiempo){
+        document.getElementById('id').value = id;
+        document.getElementById('nombre').value = nombre;
+        document.getElementById('descripcion').value = descripcion;
+        document.getElementById('tiempo').value = tiempo;
+        //myModalEditar.show();
+    }
 
 function crearCurso(){
 
@@ -165,6 +179,52 @@ console.log(datosEnviar);
   <footer>
     <!-- place footer here -->
   </footer>
+
+
+<div class="modal fade" id="myModalEditar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalTitleId">Editar registro</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form id="formulario">
+                  <div class="mb-3">
+                      <label for="" class="form-label">Id</label>
+                      <input required type="text" disabled
+                        class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted">Id</small>
+                    </div>                    
+                  <div class="mb-3">
+                    <label for="" class="form-label">Nombre</label>
+                    <input required type="text"
+                      class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingresa el nombre">
+                    <small id="helpId" class="form-text text-muted">Nombre</small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Descripcion</label>
+                    <input required type="text"
+                      class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Descripcion">
+                    <small id="helpId" class="form-text text-muted">Descripcion</small>
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label">Tiempo</label>
+                    <input required type="text"
+                      class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Ingresa tiempo">
+                    <small id="helpId" class="form-text text-muted">Tiempo</small>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+          </div>
+          <div class="modal-footer">
+            
+          </div>
+      </div>
+  </div>
+</div>
+
+
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

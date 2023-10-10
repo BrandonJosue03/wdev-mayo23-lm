@@ -22,3 +22,6 @@ console.log(typeof bolean);
 // js
 // python
 //var variable = 0;
+
+// get-ExecutionPolicy consulta las politicas
+// set-ExecutionPolicy remotesigned asigna permisos de archivos remotos firmados

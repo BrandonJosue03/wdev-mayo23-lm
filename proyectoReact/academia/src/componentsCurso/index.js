@@ -16,12 +16,11 @@ class ListarCurso extends React.Component {
     }
 
     cargardatos(){
-        const { urllistar } = this.state;
         console.log("cargando");
-        var urllista = this.url + this.listar;
+        var urllista = this.state.url + this.state.listar;
 
         //
-        fetch(urllistar)
+        fetch(urllista)
         .then( respuesta => respuesta.json())//todo va a ser tipo json
         .then((datosrespuesta) => {
             //muestra el resultado del api

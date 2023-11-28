@@ -3,12 +3,51 @@ import React from 'react';
 class ListarCurso extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            id : "",
+            nombre : "",
+            descripcion : "",
+            tiempo : "",
+            usuario : "",
+            url : "https://paginas-web-cr.com/ApiPHP/apis/",
+            listar :"ListaCurso.php"
+        }
     }
-    state = {  }
+
+    cargardatos(){
+        const { urllistar } = this.state;
+        console.log("cargando");
+        var urllista = this.url + this.listar;
+
+        //
+        fetch(urllistar)
+        .then( respuesta => respuesta.json())//todo va a ser tipo json
+        .then((datosrespuesta) => {
+            //muestra el resultado del api
+            console.log(datosrespuesta.data)
+            //pintarpalabra(datosrespuesta.data)
+        })
+        .catch(console.log);
+    }
+
+    componentDidMount(){
+        this.cargardatos();
+    }
+
     render() { 
+        const  {
+            id ,
+            nombre ,
+            descripcion ,
+            tiempo ,
+            usuario ,
+            url ,
+            listar 
+        } = this.state;
         return (
             <div>
-            <div className="container">
+            <div className="container-fluid">
                 <h1>Listar Curso</h1>
                 <div className="table-responsive">
                     <table className="table table-success">
@@ -38,8 +77,8 @@ class ListarCurso extends React.Component {
         </div>
 
             
-         );
+    );
     }
 }
- 
+
 export default ListarCurso;

@@ -11,7 +11,9 @@ class ListarCurso extends React.Component {
             tiempo : "",
             usuario : "",
             url : "https://paginas-web-cr.com/ApiPHP/apis/",
-            listar :"ListaCurso.php"
+            listar :"ListaCurso.php",
+            datos:[],
+            datosCargados:false
         }
     }
 
@@ -25,6 +27,7 @@ class ListarCurso extends React.Component {
         .then((datosrespuesta) => {
             //muestra el resultado del api
             console.log(datosrespuesta.data)
+            this.setState({datos: datosrespuesta.data, datosCargados:true})
             //pintarpalabra(datosrespuesta.data)
         })
         .catch(console.log);
@@ -42,7 +45,9 @@ class ListarCurso extends React.Component {
             tiempo ,
             usuario ,
             url ,
-            listar 
+            listar,
+            datos,
+            datosCargados
         } = this.state;
         return (
             <div>
@@ -52,22 +57,35 @@ class ListarCurso extends React.Component {
                     <table className="table table-success">
                         <thead>
                             <tr>
-                                <th scope="col">Column 1</th>
-                                <th scope="col">Column 2</th>
-                                <th scope="col">Column 3</th>
+                                <th scope="col">id</th>
+                                <th scope="col">nombre</th>
+                                <th scope="col">descripcion </th>
+                                <th scope="col">tiempo </th>
+                                <th scope="col">usuario </th>
+
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className="">
-                                <td scope="row">R1C1</td>
-                                <td>R1C2</td>
-                                <td>R1C3</td>
-                            </tr>
-                            <tr className="">
-                                <td scope="row">Item</td>
-                                <td>Item</td>
-                                <td>Item</td>
-                            </tr>
+{
+
+    datos.map(
+        (datosExtraidos)=>(
+
+            <tr key={datosExtraidos.id} className="table-success">
+            <td scope="row">{datosExtraidos.id}</td>
+            <td>{datosExtraidos.nombre}</td>
+            <td>{datosExtraidos.descripcion}</td>
+            <td>{datosExtraidos.tiempo}</td>
+            <td>{datosExtraidos.usuario}</td>
+
+            </tr>
+        )
+    )
+        
+
+    
+}
+
                         </tbody>
                     </table>
                 </div>

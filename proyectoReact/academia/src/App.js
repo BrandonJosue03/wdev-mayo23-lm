@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap'
 
 //Seleccion de componentes
 import ListarCurso from './componentsCurso/index';
+import CrearCurso from './componentsCurso/crear';
 
 import Dashboard from './componentePlantilla/dashboard';
 import Menu from './componentePlantilla/menu';
